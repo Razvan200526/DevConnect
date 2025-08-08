@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Cairo+Play:wght@900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Colors */
+  --color-primary: #432371;
+  --color-primary-50: #f6f4fe;
+  --color-primary-100: #eeebfc;
+  --color-primary-200: #e1dafa;
+  --color-primary-300: #cabdf5;
+  --color-primary-400: #af97ee;
+  --color-primary-500: #946de5;
+  --color-primary-600: #844ed9;
+  --color-primary-700: #743bc6;
+  --color-primary-800: #6131a6;
+  --color-primary-900: #432371;
+  --color-primary-950: #32195c;
+
+  --color-secondary: #faae7b;
+  --color-secondary-50: #fff5ed;
+  --color-secondary-100: #fee9d6;
+  --color-secondary-200: #fcceac;
+  --color-secondary-300: #faae7b;
+  --color-secondary-400: #f77e40;
+  --color-secondary-500: #f45c1b;
+  --color-secondary-600: #e54311;
+  --color-secondary-700: #be3010;
+  --color-secondary-800: #972815;
+  --color-secondary-900: #7a2314;
+  --color-secondary-950: #420f08;
+
+  --color-background: #e1dafa;
+
+  --color-dark: #2e0840;
+  --color-dark-50: #f9f5fe;
+  --color-dark-100: #e7e3e9;
+  --color-dark-200: #d0c8d4;
+  --color-dark-300: #b9acbf;
+  --color-dark-400: #a291aa;
+  --color-dark-500: #8a7594;
+  --color-dark-600: #735a7f;
+  --color-dark-700: #5c3e6a;
+  --color-dark-800: #452355;
+  --color-dark-900: #2e0840;
+  --color-dark-950: #2e0840;
+
+  --color-light: #ffffff;
+  --color-light-50: #ffffff;
+  --color-light-100: #ffffff;
+  --color-light-200: #e9e5eb;
+  --color-light-300: #d4ccd8;
+  --color-light-400: #bfb3c4;
+  --color-light-500: #aa9ab1;
+  --color-light-600: #94819e;
+  --color-light-700: #7f688a;
+  --color-light-800: #6a4f77;
+  --color-light-900: #553664;
+  --color-light-950: #292929;
+
+  --color-error: #cc0000;
+  --color-error-50: #fff0f0;
+  --color-error-100: #ffdddd;
+  --color-error-200: #ffc1c1;
+  --color-error-300: #ff9595;
+  --color-error-400: #ff5959;
+  --color-error-500: #ff2626;
+  --color-error-600: #fc0606;
+  --color-error-700: #cc0000;
+  --color-error-800: #af0505;
+  --color-error-900: #900c0c;
+  --color-error-950: #500000;
+
+  --color-danger: var(--color-error);
+  --color-danger-50: var(--color-error-50);
+  --color-danger-100: var(--color-error-100);
+  --color-danger-200: var(--color-error-200);
+  --color-danger-300: var(--color-error-300);
+  --color-danger-400: var(--color-error-400);
+  --color-danger-500: var(--color-error-500);
+  --color-danger-600: var(--color-error-600);
+  --color-danger-700: var(--color-error-700);
+  --color-danger-800: var(--color-error-800);
+  --color-danger-900: var(--color-error-900);
+  --color-danger-950: var(--color-error-950);
+
+  --color-info: #0099cc;
+  --color-info-50: #f0faff;
+  --color-info-100: #e0f5fe;
+  --color-info-200: #b9ecfe;
+  --color-info-300: #7cdffd;
+  --color-info-400: #36d0fa;
+  --color-info-500: #0cbaeb;
+  --color-info-600: #0099cc;
+  --color-info-700: #0178a3;
+  --color-info-800: #066586;
+  --color-info-900: #0b536f;
+  --color-info-950: #07354a;
+
+  --color-success: #007e33;
+  --color-success-50: #ecfff3;
+  --color-success-100: #d3ffe5;
+  --color-success-200: #aaffcd;
+  --color-success-300: #69ffa8;
+  --color-success-400: #21ff7b;
+  --color-success-500: #00f258;
+  --color-success-600: #00ca45;
+  --color-success-700: #009e39;
+  --color-success-800: #007e33;
+  --color-success-900: #02652b;
+  --color-success-950: #003915;
+
+  --color-warning: #ff8800;
+  --color-warning-50: #fffbec;
+  --color-warning-100: #fff5d3;
+  --color-warning-200: #ffe8a5;
+  --color-warning-300: #ffd66d;
+  --color-warning-400: #ffb832;
+  --color-warning-500: #ffa00a;
+  --color-warning-600: #ff8800;
+  --color-warning-700: #cc6402;
+  --color-warning-800: #a14d0b;
+  --color-warning-900: #82410c;
+  --color-warning-950: #461f04;
+
+  --color-videos: #147df5;
+  --color-videos-50: #c4defc;
+  --color-videos-100: #b1d4fc;
+  --color-videos-200: #89befa;
+  --color-videos-300: #62a8f8;
+  --color-videos-400: #3b93f7;
+
+  --color-images: #1c7c54;
+  --color-images-50: #71dfb1;
+  --color-images-100: #60dba8;
+  --color-images-200: #3fd496;
+  --color-images-300: #2bbf81;
+  --color-images-400: #249d6b;
+
+  --color-flashcards: #ec407a;
+  --color-flashcards-50: #fce4ec;
+  --color-flashcards-100: #fce4ec;
+  --color-flashcards-200: #f8bbd0;
+  --color-flashcards-300: #f48fb1;
+  --color-flashcards-400: #f06292;
+
+  --color-notes: #0f4c5c;
+  --color-notes-50: #42bfe0;
+  --color-notes-100: #31badd;
+  --color-notes-200: #20a3c5;
+  --color-notes-300: #1a86a2;
+  --color-notes-400: #15697f;
+
+  --color-disciplines: #b51b75;
+  --color-disciplines-50: #f098cb;
+  --color-disciplines-100: #ed86c2;
+  --color-disciplines-200: #e863b0;
+  --color-disciplines-300: #e23f9f;
+  --color-disciplines-400: #d9208c;
+
+  --color-locations: #9c27b0;
+  --color-locations-50: #e0a4eb;
+  --color-locations-100: #db93e7;
+  --color-locations-200: #d072e0;
+  --color-locations-300: #c450d8;
+  --color-locations-400: #b92fd1;
+
+  --color-questions: #e36414;
+  --color-questions-50: #f9d0b6;
+  --color-questions-100: #f7c4a3;
+  --color-questions-200: #f4ab7e;
+  --color-questions-300: #f09358;
+  --color-questions-400: #ed7b33;
+
+  --color-market: #d81b60;
+  --color-market-50: #f8bbd0;
+  --color-market-100: #f48fb1;
+  --color-market-200: #f06292;
+  --color-market-300: #ec407a;
+
+  --color-books: #8b4513;
+  --color-books-50: #f4e9d9;
+  --color-books-100: #e9d4b8;
+  --color-books-200: #d4b377;
+  --color-books-300: #bf9236;
+  --color-books-400: #a37025;
+
+  --font-title : "Anta" , sans-serif;
+  --font-secondary: "DM Mono", monospace;
+  --font-cairo : "Cairo Play" , sans-serif;
+  --font-points: "Saira Stencil One", sans-serif;
+  --font-number: "Saira Stencil One", sans-serif;
+}
+
+body{
+  min-height : 100%;
+  overflow-x : hidden;
+}
