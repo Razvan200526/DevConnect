@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "style" : "bunx @tailwindcss/cli -i ./styles/globals.css -o ./src/index.css --watch",
+    "style": "bunx @tailwindcss/cli -i ./styles/globals.css -o ./src/index.css --watch",
     "front": " bun --hot src/index.html",
-    "dev" : "concurrently \"bun run front\" \"bun run style\"",
+    "dev": "concurrently \"bun run front\" \"bun run style\"",
     "start": "NODE_ENV=production bun src/index.tsx",
     "build": "bun run build.ts"
   },

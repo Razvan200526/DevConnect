@@ -14,7 +14,7 @@ const BottomBar = () => {
 							<li key={item.href} className="text-xl first:mr-auto">
 								<Link
 									to={item.href}
-									className="inline-flex items-center gap-2 hover:underline underline-offset-4"
+									className="group inline-flex items-center gap-2"
 								>
 									{item.image && (
 										<img
@@ -24,7 +24,16 @@ const BottomBar = () => {
 											aria-hidden="true"
 										/>
 									)}
-									<span>{item.text}</span>
+									<span
+										className={`${item.font} relative inline-block text-base sm:text-lg md:text-xl text-dark-600
+            bg-[linear-gradient(var(--color-secondary-300),var(--color-secondary-300))]
+            bg-[length:0%_2px] bg-no-repeat bg-[position:50%_100%]
+            transition-[background-size] duration-300 ease-out
+            hover:bg-[length:100%_2px]
+          `}
+									>
+										{item.text}
+									</span>
 								</Link>
 							</li>
 						))}

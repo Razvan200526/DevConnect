@@ -14,8 +14,8 @@ export default function DashboardNavBar() {
 					<Link
 						to="/"
 						className="
-							relative hidden sm:inline-block text-[var(--color-dark-600)] text-base md:text-xl font-title
-							bg-[linear-gradient(theme(colors.amber.500),theme(colors.amber.500))]
+							relative hidden sm:inline-block text-base md:text-xl font-title text-dark-600
+              bg-[linear-gradient(var(--color-secondary-300),var(--color-secondary-300))]
 							bg-[length:0%_2px] bg-no-repeat bg-[position:50%_100%]
 							transition-[background-size] duration-300 ease-out
 							hover:bg-[length:100%_2px]
@@ -29,7 +29,7 @@ export default function DashboardNavBar() {
 						to="/"
 						className="
 							relative text-base hidden sm:block md:text-xl font-secondary
-							bg-[linear-gradient(theme(colors.amber.500),theme(colors.amber.500))]
+              bg-[linear-gradient(var(--color-secondary-300),var(--color-secondary-300))]
 							bg-[length:0%_2px] bg-no-repeat bg-[position:50%_100%]
 							transition-[background-size] duration-300 ease-out
 							hover:bg-[length:100%_2px]
@@ -41,12 +41,13 @@ export default function DashboardNavBar() {
 				<div className="flex items-center justify-center flex-1 py-10">
 					<Link
 						to="/login"
-						className='relative inline-block text-base sm:text-lg md:text-xl font-secondary
-							bg-[linear-gradient(theme(colors.amber.500),theme(colors.amber.500))]
+						className="
+							relative inline-block text-base sm:text-lg md:text-xl font-secondary text-secondary-300
+              bg-[linear-gradient(var(--color-secondary-300),var(--color-secondary-300))]
 							bg-[length:0%_2px] bg-no-repeat bg-[position:50%_100%]
 							transition-[background-size] duration-300 ease-out
 							hover:bg-[length:100%_2px]
-						"'
+						"
 					>
 						Log In
 					</Link>
